@@ -17,6 +17,14 @@ $(document).ready(function(){
         function (data){ $('#testProwl-result').html(data); });
     });
 
+    $('#testHowl').click(function(){
+        $('#testHowl-result').html(loading);
+        var howl_username = $("#howl_username").val();
+        var howl_password = $("#howl_password").val();
+        var howl_result = $.get(sbRoot+"/home/testHowl", {'howl_username': howl_username, 'howl_password': howl_password}, 
+        function (data){ $('#testHowl-result').html(data); });
+    });
+
     $('#testXBMC').click(function(){
         $('#testXBMC-result').html(loading);
         var xbmc_host = $("#xbmc_host").val();

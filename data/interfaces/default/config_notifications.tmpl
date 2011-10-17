@@ -419,7 +419,73 @@
                     </fieldset>
                 </div><!-- /component-group //-->
 
-                 <div id="core-component-group6" class="component-group clearfix">
+            <div id="core-component-group6" class="component-group clearfix">
+
+                    <div class="component-group-desc">
+                        <h3><a href="http://www.howlapp.com/" onclick="window.open(this.href, '_blank'); return false;"><img src="$sbRoot/images/notifiers/howl.gif" alt="Howl" title="Howl" width="16" height="16" />Howl</a></h3>
+                        <p>A Growl client for iOS.</p>
+                    </div>
+
+                    <fieldset class="component-group-list">
+                        <div class="field-pair">
+                            <input type="checkbox" class="enabler" name="use_howl" id="use_howl" #if $sickbeard.USE_HOWL then "checked=\"checked\"" else ""# /> 
+                            <label class="clearfix" for="use_howl">
+                                <span class="component-title">Enable</span>
+                                <span class="component-desc">Should Sick Beard send Howl notifications?</span>
+                            </label>
+                        </div>
+
+                        <div id="content_use_howl">
+                        <div class="field-pair">
+                            <input type="checkbox" name="howl_notify_onsnatch" id="howl_notify_onsnatch" #if $sickbeard.HOWL_NOTIFY_ONSNATCH then "checked=\"checked\"" else ""# /> 
+                            <label class="clearfix" for="howl_notify_onsnatch">
+                                <span class="component-title">Notify on Snatch</span>
+                                <span class="component-desc">Send notification when we start a download?</span>
+                            </label>
+                        </div>
+
+                        <div class="field-pair">
+                            <input type="checkbox" name="howl_notify_ondownload" id="howl_notify_ondownload" #if $sickbeard.HOWL_NOTIFY_ONDOWNLOAD then "checked=\"checked\"" else ""# />
+                            <label class="clearfix" for="howl_notify_ondownload">
+                                <span class="component-title">Notify on Download</span>
+                                <span class="component-desc">Send notification when we finish a download?</span>
+                            </label>
+                        </div>
+
+                        <div class="field-pair">
+                            <label class="nocheck clearfix">
+                                <span class="component-title">Howl Username:</span>
+                                <input type="text" name="howl_username" id="howl_username" value="$sickbeard.HOWL_USERNAME" size="35" />
+                            </label>
+                            <label class="nocheck clearfix">
+                                <span class="component-title">&nbsp;</span>
+                                <span class="component-desc">Register at: <a href="http://howlapp.com/" onclick="window.open(this.href, '_blank'); return false;">http://howlapp.com/</a></span>
+                            </label>
+                        </div>
+
+                        <div class="field-pair">
+                            <label class="nocheck clearfix">
+                                <span class="component-title">Howl Password</span>
+                                <input type="password" name="howl_password" id="howl_password" value="$sickbeard.HOWL_PASSWORD" size="35" />
+                            </label>
+                            <label class="nocheck clearfix">
+                                <span class="component-title">&nbsp;</span>
+                                <span class="component-desc">Register at: <a href="http://howlapp.com/" onclick="window.open(this.href, '_blank'); return false;">http://howlapp.com/</a></span>
+                            </label>
+                        </div>
+
+                        <div class="testNotification" id="testHowl-result">Click below to test.</div>
+                        <input type="button" value="Test Howl" id="testHowl" />
+                        <input type="submit" class="config_submitter" value="Save Changes" />
+
+                        </div><!-- /content_use_howl //-->
+
+                    </fieldset>
+                </div><!-- /component-group //-->
+
+
+
+                 <div id="core-component-group7" class="component-group clearfix">
 
                     <div class="component-group-desc">
                         <h3><a href="http://notifo.com/" onclick="window.open(this.href, '_blank'); return false;"><img src="$sbRoot/images/notifiers/notifo.gif" alt="Notifo" title="Notifo" width="16" height="16" /> Notifo</a></h3>
@@ -485,7 +551,7 @@
                 </div>
 
 
-                <div id="core-component-group7" class="component-group clearfix">
+                <div id="core-component-group8" class="component-group clearfix">
                     <div class="component-group-desc">
                         <h3><a href="http://library.gnome.org/devel/libnotify/" onclick="window.open(this.href, '_blank'); return false;"><img src="$sbRoot/images/notifiers/libnotify.gif" alt="Libnotify" title="Libnotify" width="16" height="16" /> Libnotify</a></h3>
                         <p>The standard desktop notification API for Linux/*nix systems.  This notifier will only function if the pynotify module is installed (Ubuntu/Debian package <a href="apt:python-notify">python-notify</a>).</p>
@@ -526,7 +592,7 @@
                     </fieldset>
                 </div><!-- /component-group //-->
 
-                <div id="core-component-group8" class="component-group clearfix">
+                <div id="core-component-group9" class="component-group clearfix">
 
                     <div class="component-group-desc">
                         <h3><a href="http://www.popcornhour.com/" onclick="window.open(this.href, '_blank'); return false;"><img src="$sbRoot/images/notifiers/nmj.gif" alt="Networked Media Jukebox" title="Networked Media Jukebox" width="16" height="16" /> NMJ</a></h3>
@@ -594,7 +660,7 @@
                     </fieldset>
                 </div><!-- /component-group //-->
 
-                <div id="core-component-group9" class="component-group clearfix">
+                <div id="core-component-group10" class="component-group clearfix">
                     <div class="component-group-desc">
                         <h3><a href="http://synology.com/" onclick="window.open(this.href, '_blank'); return false;"><img src="$sbRoot/images/notifiers/synoindex.gif" alt="Synology Indexer" title="Synology Indexer" width="16" height="16" /> Synology Indexer</a></h3>
                         <p>Synology Indexer is the daemon running on the Synology NAS to build its media database.</p>

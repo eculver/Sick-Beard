@@ -215,6 +215,12 @@ PROWL_NOTIFY_ONDOWNLOAD = False
 PROWL_API = None
 PROWL_PRIORITY = 0
 
+USE_HOWL = False
+HOWL_NOTIFY_ONSNATCH = False
+HOWL_NOTIFY_ONDOWNLOAD = False
+HOWL_USERNAME = None
+HOWL_PASSWORD = None
+
 USE_TWITTER = False
 TWITTER_NOTIFY_ONSNATCH = False
 TWITTER_NOTIFY_ONDOWNLOAD = False
@@ -352,7 +358,9 @@ def initialize(consoleLogging=True):
                 SEARCH_FREQUENCY, DEFAULT_SEARCH_FREQUENCY, BACKLOG_SEARCH_FREQUENCY, \
                 QUALITY_DEFAULT, SEASON_FOLDERS_FORMAT, SEASON_FOLDERS_DEFAULT, STATUS_DEFAULT, \
                 GROWL_NOTIFY_ONSNATCH, GROWL_NOTIFY_ONDOWNLOAD, TWITTER_NOTIFY_ONSNATCH, TWITTER_NOTIFY_ONDOWNLOAD, \
-                USE_GROWL, GROWL_HOST, GROWL_PASSWORD, USE_PROWL, PROWL_NOTIFY_ONSNATCH, PROWL_NOTIFY_ONDOWNLOAD, PROWL_API, PROWL_PRIORITY, PROG_DIR, NZBMATRIX, NZBMATRIX_USERNAME, \
+                USE_GROWL, GROWL_HOST, GROWL_PASSWORD, USE_PROWL, PROWL_NOTIFY_ONSNATCH, PROWL_NOTIFY_ONDOWNLOAD, PROWL_API, PROWL_PRIORITY, \
+                USE_HOWL, HOWL_NOTIFY_ONSNATCH, HOWL_NOTIFY_ONDOWNLOAD, HOWL_USERNAME, HOWL_PASSWORD, \
+                PROG_DIR, NZBMATRIX, NZBMATRIX_USERNAME, \
                 NZBMATRIX_APIKEY, versionCheckScheduler, VERSION_NOTIFY, PROCESS_AUTOMATICALLY, \
                 KEEP_PROCESSED_DIR, TV_DOWNLOAD_DIR, TVDB_BASE_URL, MIN_SEARCH_FREQUENCY, \
                 showQueueScheduler, searchQueueScheduler, ROOT_DIRS, \
@@ -549,6 +557,12 @@ def initialize(consoleLogging=True):
         PROWL_NOTIFY_ONDOWNLOAD = bool(check_setting_int(CFG, 'Prowl', 'prowl_notify_ondownload', 0))
         PROWL_API = check_setting_str(CFG, 'Prowl', 'prowl_api', '')
         PROWL_PRIORITY = check_setting_str(CFG, 'Prowl', 'prowl_priority', "0")
+
+        USE_HOWL = bool(check_setting_int(CFG, 'Howl', 'use_howl', 0))
+        HOWL_NOTIFY_ONSNATCH = bool(check_setting_int(CFG, 'Howl', 'howl_notify_onsnatch', 0))
+        HOWL_NOTIFY_ONDOWNLOAD = bool(check_setting_int(CFG, 'Howl', 'howl_notify_ondownload', 0))
+        HOWL_USERNAME = check_setting_str(CFG, 'Howl', 'howl_username', '')
+        HOWL_PASSWORD = check_setting_str(CFG, 'Howl', 'howl_password', '')
 
         USE_TWITTER = bool(check_setting_int(CFG, 'Twitter', 'use_twitter', 0))
         TWITTER_NOTIFY_ONSNATCH = bool(check_setting_int(CFG, 'Twitter', 'twitter_notify_onsnatch', 0))

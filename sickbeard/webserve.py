@@ -1135,6 +1135,7 @@ class ConfigNotifications:
                           plex_server_host=None, plex_host=None, plex_username=None, plex_password=None,
                           use_growl=None, growl_notify_onsnatch=None, growl_notify_ondownload=None, growl_host=None, growl_password=None, 
                           use_prowl=None, prowl_notify_onsnatch=None, prowl_notify_ondownload=None, prowl_api=None, prowl_priority=0, 
+                          use_howl=None, howl_notify_onsnatch=None, howl_notify_ondownload=None, howl_username=None, howl_password=None, 
                           use_twitter=None, twitter_notify_onsnatch=None, twitter_notify_ondownload=None, 
                           use_notifo=None, notifo_notify_onsnatch=None, notifo_notify_ondownload=None, notifo_username=None, notifo_apisecret=None,
                           use_libnotify=None, libnotify_notify_onsnatch=None, libnotify_notify_ondownload=None,
@@ -1216,6 +1217,20 @@ class ConfigNotifications:
         else:
             use_prowl = 0
 
+        if howl_notify_onsnatch == "on":
+            howl_notify_onsnatch = 1
+        else:
+            howl_notify_onsnatch = 0
+
+        if howl_notify_ondownload == "on":
+            howl_notify_ondownload = 1
+        else:
+            howl_notify_ondownload = 0
+        if use_howl == "on":
+            use_howl = 1
+        else:
+            use_howl = 0
+
         if twitter_notify_onsnatch == "on":
             twitter_notify_onsnatch = 1
         else:
@@ -1283,6 +1298,12 @@ class ConfigNotifications:
         sickbeard.PROWL_NOTIFY_ONDOWNLOAD = prowl_notify_ondownload
         sickbeard.PROWL_API = prowl_api
         sickbeard.PROWL_PRIORITY = prowl_priority
+
+        sickbeard.USE_HOWL = use_howl
+        sickbeard.HOWL_NOTIFY_ONSNATCH = howl_notify_onsnatch
+        sickbeard.HOWL_NOTIFY_ONDOWNLOAD = howl_notify_ondownload
+        sickbeard.HOWL_USERNAME = howl_username
+        sickbeard.HOWL_PASSWORD = howl_password
 
         sickbeard.USE_TWITTER = use_twitter
         sickbeard.TWITTER_NOTIFY_ONSNATCH = twitter_notify_onsnatch
@@ -1833,6 +1854,16 @@ class Home:
             return "Test prowl notice sent successfully"
         else:
             return "Test prowl notice failed"
+
+    @cherrypy.expose
+    def testHowl(self, howl_username=None, howl_password=None):
+        cherrypy.response.headers['Cache-Control'] = "max-age=0,no-cache,no-store"
+
+        result = notifiers.howl_notifier.test_notify(howl_username, howl_password)
+        if result:
+            return "Test howl notice sent successfully"
+        else:
+            return "Test howl notice failed"
 
     @cherrypy.expose
     def testNotifo(self, username=None, apisecret=None):
