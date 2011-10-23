@@ -5,6 +5,7 @@ cache.db*
 config.ini
 Logs/*
 sickbeard.db*
+.sickbeard
 autoProcessTV/autoProcessTV.cfg
 
 #  Compiled source   #
