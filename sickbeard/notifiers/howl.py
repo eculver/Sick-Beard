@@ -18,8 +18,8 @@
 
 from httplib import HTTPSConnection
 from urllib import urlencode
+from lib import requests
 
-import requests
 import sickbeard
 
 from sickbeard import logger, common
