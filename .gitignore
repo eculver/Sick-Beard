@@ -21,6 +21,7 @@ autoProcessTV/autoProcessTV.cfg
 *.cproject
 *.tmproj
 *.tmproject
+*.sw?
 
 # OS generated files #
 ######################
