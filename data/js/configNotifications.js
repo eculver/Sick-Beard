@@ -60,6 +60,13 @@ $(document).ready(function(){
         function (data){ $('#testBoxcar-result').html(data); });
     });
 
+    $('#testPushover').click(function(){
+        $('#testPushover-result').html(loading);
+        var pushover_userkey = $("#pushover_userkey").val();
+        $.get(sbRoot+"/home/testPushover", {'userKey': pushover_userkey},
+        function (data){ $('#testPushover-result').html(data); });
+    });
+
     $('#testLibnotify').click(function(){
         $('#testLibnotify-result').html(loading);
         $.get(sbRoot+"/home/testLibnotify",
@@ -134,5 +141,13 @@ $(document).ready(function(){
 
         $.get(sbRoot+"/home/testTrakt", {'api': trakt_api, 'username': trakt_username, 'password': trakt_password},
         function (data){ $('#testTrakt-result').html(data); });
+    });
+
+    $('#testNMA').click(function(){
+        $('#testNMA-result').html(loading);
+        var nma_api = $("#nma_api").val();
+        var nma_priority = $("#nma_priority").val();
+        var nma_result = $.get(sbRoot+"/home/testNMA", {'nma_api': nma_api, 'nma_priority': nma_priority}, 
+        function (data){ $('#testNMA-result').html(data); });
     });
 });
