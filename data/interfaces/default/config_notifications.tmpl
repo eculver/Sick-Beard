@@ -14,10 +14,12 @@
 <div id="config-content">
 
 <form id="configForm" action="saveNotifications" method="post">
-
             <div id="config-components">
+                <br />
+                <h1>Home Theater</h1>
+                <br />
 
-                <div id="core-component-group1" class="component-group clearfix">
+                <div class="component-group clearfix">
 
                     <div class="component-group-desc">
                         <h3><a href="http://xbmc.org/" onclick="window.open(this.href, '_blank'); return false;"><img src="$sbRoot/images/notifiers/xbmc.gif" alt="XBMC" title="XBMC" width="16" height="16" /> XBMC</a></h3>
@@ -112,7 +114,7 @@
                     </fieldset>
                 </div><!-- /component-group //-->
 
-                <div id="core-component-group2" class="component-group clearfix">
+                <div class="component-group clearfix">
 
                     <div class="component-group-desc">
                         <h3><a href="http://www.plexapp.com/" onclick="window.open(this.href, '_blank'); return false;"><img src="$sbRoot/images/notifiers/plex.gif" alt="Plex Media Server" title="Plex Media Server" width="16" height="16" /> Plex Media Server</a></h3>
@@ -206,7 +208,11 @@
                     </fieldset>
                 </div><!-- /component-group -->
 
-                <div id="core-component-group3" class="component-group clearfix">
+                <br />
+                <h1>Devices</h1>
+                <br />
+
+                <div class="component-group clearfix">
 
                     <div class="component-group-desc">
                         <h3><a href="http://growl.info/" onclick="window.open(this.href, '_blank'); return false;"><img src="$sbRoot/images/notifiers/growl.gif" alt="Growl" title="Growl" width="16" height="16" /> Growl</a></h3>
@@ -268,89 +274,13 @@
                         <div class="testNotification" id="testGrowl-result">Click below to register and test Growl, this is required for Growl notifications to work.</div>
                         <input type="button" value="Register Growl" id="testGrowl" />
                         <input type="submit" class="config_submitter" value="Save Changes" />
-                        
+
                         </div><!-- /content_use_growl //-->
 
                     </fieldset>
                 </div><!-- /component-group //-->
 
-                <div id="core-component-group4" class="component-group clearfix">
-                
-                    <div class="component-group-desc">
-                        <h3><a href="http://www.twitter.com/" onclick="window.open(this.href, '_blank'); return false;"><img src="$sbRoot/images/notifiers/twitter.gif" alt="Twitter" title="Twitter" width="16" height="16" /> Twitter</a></h3>
-                        <p>A social networking and microblogging service, enabling its users to send and read other users' messages called tweets.</p>
-                    </div>
-
-                    <fieldset class="component-group-list">
-                        <div class="field-pair">
-                            <input type="checkbox" class="enabler" name="use_twitter" id="use_twitter" #if $sickbeard.USE_TWITTER then "checked=\"checked\"" else ""# />
-                            <label class="clearfix" for="use_twitter">
-                                <span class="component-title">Enable</span>
-                                <span class="component-desc">Should Sick Beard post tweets on Twitter?</span>
-                            </label>
-                            <label class="nocheck clearfix" for="use_twitter">
-                                <span class="component-title">&nbsp;</span>
-                                <span class="component-desc">You may want to use a second account.</span>
-                            </label>
-                        </div>
-
-                        <div id="content_use_twitter">
-                        <div class="field-pair">
-                            <input type="checkbox" name="twitter_notify_onsnatch" id="twitter_notify_onsnatch" #if $sickbeard.TWITTER_NOTIFY_ONSNATCH then "checked=\"checked\"" else ""# /> 
-                            <label class="clearfix" for="twitter_notify_onsnatch">
-                                <span class="component-title">Notify on Snatch</span>
-                                <span class="component-desc">Send notification when we start a download?</span>
-                            </label>
-                        </div>
-
-                        <div class="field-pair">
-                            <input type="checkbox" name="twitter_notify_ondownload" id="twitter_notify_ondownload" #if $sickbeard.TWITTER_NOTIFY_ONDOWNLOAD then "checked=\"checked\"" else ""# />
-                            <label class="clearfix" for="twitter_notify_ondownload">
-                                <span class="component-title">Notify on Download</span>
-                                <span class="component-desc">Send notification when we finish a download?</span>
-                            </label>
-                        </div>
-
-                        <div class="field-pair">
-                            <label class="clearfix">
-                                <span class="component-title">Step One</span>
-                            </label>
-                            <label class="nocheck clearfix">
-                                <span class="component-desc">Click the "Request Authorization" button.<br/> This will open a new page containing an auth key.<br/> Note: if nothing happens check your popup blocker.<br/></span>
-                                <input type="button" value="Request Authorization" id="twitterStep1" />
-                            </label>
-                        </div>
-
-                        <div class="field-pair">
-                            <label class="clearfix">
-                                <span class="component-title">Step Two</span>
-                            </label>
-                            <label class="nocheck clearfix">
-                                <span class="component-desc">Enter the key Twitter gave you below, and click "Verify Key".<br/></span>
-                                <input type="text" id="twitter_key" value="" size="35" /><br />
-                            </label>
-                            <label class="nocheck clearfix">
-                                <input type="button" value="Verify Key" id="twitterStep2" />
-                            </label>
-                        </div>
-
-                        <div class="field-pair">
-                            <label class="clearfix">
-                                <span class="component-title">Step Three</span>
-                            </label>
-                        </div>
-
-                        <div class="testNotification" id="testTwitter-result">Click below to test.</div>
-                        <input type="button" value="Test Twitter" id="testTwitter" />
-                        <input type="submit" class="config_submitter" value="Save Changes" />
-                        
-                        </div><!-- /content_use_twitter //-->
-
-                    </fieldset>
-                </div><!-- /component-group //-->
-                
-            <div id="core-component-group5" class="component-group clearfix">
-
+                <div class="component-group clearfix">
                     <div class="component-group-desc">
                         <h3><a href="http://www.prowlapp.com/" onclick="window.open(this.href, '_blank'); return false;"><img src="$sbRoot/images/notifiers/prowl.gif" alt="Prowl" title="Prowl" width="16" height="16" /> Prowl</a></h3>
                         <p>A Growl client for iOS.</p>
@@ -413,14 +343,13 @@
                         <div class="testNotification" id="testProwl-result">Click below to test.</div>
                         <input type="button" value="Test Prowl" id="testProwl" />
                         <input type="submit" class="config_submitter" value="Save Changes" />
-                        
+
                         </div><!-- /content_use_prowl //-->
 
                     </fieldset>
                 </div><!-- /component-group //-->
 
-                <div id="core-component-group6" class="component-group clearfix">
-
+                <div class="component-group clearfix">
                     <div class="component-group-desc">
                         <h3><a href="http://www.howlapp.com/" onclick="window.open(this.href, '_blank'); return false;"><img src="$sbRoot/images/notifiers/howl.gif" alt="Howl" title="Howl" width="16" height="16" />Howl</a></h3>
                         <p>A Growl client for iOS.</p>
@@ -483,9 +412,7 @@
                     </fieldset>
                 </div><!-- /component-group //-->
 
-
-
-                 <div id="core-component-group7" class="component-group clearfix">
+                <div class="component-group clearfix">
 
                     <div class="component-group-desc">
                         <h3><a href="http://notifo.com/" onclick="window.open(this.href, '_blank'); return false;"><img src="$sbRoot/images/notifiers/notifo.gif" alt="Notifo" title="Notifo" width="16" height="16" /> Notifo</a></h3>
@@ -543,14 +470,14 @@
                         <div class="testNotification" id="testNotifo-result">Click below to test.</div>
                         <input type="button" value="Test Notifo" id="testNotifo" />
                         <input type="submit" class="config_submitter" value="Save Changes" />
-                        
+
                         </div><!-- /content_use_notifo //-->
 
                     </fieldset>
 
                 </div>
 
-                <div id="core-component-group8" class="component-group clearfix">
+                <div class="component-group clearfix">
                     <div class="component-group-desc">
                         <h3><a href="http://library.gnome.org/devel/libnotify/" onclick="window.open(this.href, '_blank'); return false;"><img src="$sbRoot/images/notifiers/libnotify.gif" alt="Libnotify" title="Libnotify" width="16" height="16" /> Libnotify</a></h3>
                         <p>The standard desktop notification API for Linux/*nix systems.  This notifier will only function if the pynotify module is installed (Ubuntu/Debian package <a href="apt:python-notify">python-notify</a>).</p>
@@ -591,7 +518,7 @@
                     </fieldset>
                 </div><!-- /component-group //-->
 
-                <div id="core-component-group9" class="component-group clearfix">
+                <div class="component-group clearfix">
 
                     <div class="component-group-desc">
                         <h3><a href="http://www.popcornhour.com/" onclick="window.open(this.href, '_blank'); return false;"><img src="$sbRoot/images/notifiers/nmj.gif" alt="Networked Media Jukebox" title="Networked Media Jukebox" width="16" height="16" /> NMJ</a></h3>
@@ -659,7 +586,7 @@
                     </fieldset>
                 </div><!-- /component-group //-->
 
-                <div id="core-component-group10" class="component-group clearfix">
+                <div class="component-group clearfix">
                     <div class="component-group-desc">
                         <h3><a href="http://synology.com/" onclick="window.open(this.href, '_blank'); return false;"><img src="$sbRoot/images/notifiers/synoindex.gif" alt="Synology Indexer" title="Synology Indexer" width="16" height="16" /> Synology Indexer</a></h3>
                         <p>Synology Indexer is the daemon running on the Synology NAS to build its media database.</p>
@@ -682,7 +609,7 @@
                     </fieldset>
                 </div><!-- /component-group //-->
 
-                 <div id="core-component-group10" class="component-group clearfix">
+                <div class="component-group clearfix">
 
                     <div class="component-group-desc">
                         <h3><a href="http://boxcar.io/" onclick="window.open(this.href, '_blank'); return false;"><img src="$sbRoot/images/notifiers/boxcar.gif" alt="Boxcar" title="Boxcar" width="16" height="16" /> Boxcar</a></h3>
@@ -729,16 +656,157 @@
                         <div class="testNotification" id="testBoxcar-result">Click below to test.</div>
                         <input type="button" value="Test Boxcar" id="testBoxcar" />
                         <input type="submit" class="config_submitter" value="Save Changes" />
-                        
+
                         </div><!-- /content_use_boxcar //-->
 
                     </fieldset>
 
                 </div>
 
+                <div class="component-group clearfix">
+                    <div class="component-group-desc">
+                        <h3><a href="http://pytivo.sourceforge.net/wiki/index.php/PyTivo" onclick="window.open(this.href, '_blank'); return false;"><img src="$sbRoot/images/notifiers/pytivo.gif" alt="pyTivo" title="pyTivo" width="16" height="16" />pyTivo</a></h3>
+                        <p>pyTivo is both an HMO and GoBack server.  This notifier will load the completed downloads to your Tivo.</p>
+                    </div>
+
+                    <fieldset class="component-group-list">
+                        <div class="field-pair">
+                            <input type="checkbox" class="enabler" name="use_pytivo" id="use_pytivo" #if $sickbeard.USE_PYTIVO then "checked=\"checked\"" else ""# /> 
+                            <label class="clearfix" for="use_pytivo">
+                                <span class="component-title">Enable</span>
+                                <span class="component-desc">Should Sick Beard send notifications to pyTivo?</span>
+                            </label>
+                            <label class="nocheck clearfix" for="use_pytivo">
+                                <span class="component-title">&nbsp;</span>
+                                <span class="component-desc">Note: Requires the downloaded files to be accessible to pyTivo, eg on same server.</span>
+                            </label>
+                        </div>
+
+                        <div id="content_use_pytivo">
+
+                            <div class="field-pair">
+                                <label class="nocheck clearfix">
+                                    <span class="component-title">pyTivo IP:Port</span>
+                                    <input type="text" name="pytivo_host" id="pytivo_host" value="$sickbeard.PYTIVO_HOST" size="35" />
+                                </label>
+                                <label class="nocheck clearfix">
+                                    <span class="component-title">&nbsp;</span>
+                                    <span class="component-desc">Host running pyTivo (eg. 192.168.1.1:9032)</span>
+                                </label>
+                            </div>
+
+                            <div class="field-pair">
+                                <label class="nocheck clearfix">
+                                    <span class="component-title">pyTivo Share name</span>
+                                    <input type="text" name="pytivo_share_name" id="pytivo_share_name" value="$sickbeard.PYTIVO_SHARE_NAME" size="35" />
+                                </label>
+                                <label class="nocheck clearfix">
+                                    <span class="component-title">&nbsp;</span>
+                                    <span class="component-desc">Value used in pyTivo Web Configuration to name the share.</span>
+                                </label>
+                            </div>
 
 
-                <div id="core-component-group11" class="component-group clearfix">
+                            <div class="field-pair">
+                                <label class="nocheck clearfix">
+                                    <span class="component-title">Tivo Name</span>
+                                    <input type="text" name="pytivo_tivo_name" id="pytivo_tivo_name" value="$sickbeard.PYTIVO_TIVO_NAME" size="35" />
+                                </label>
+                                <label class="nocheck clearfix">
+                                    <span class="component-title">&nbsp;</span>
+                                    <span class="component-desc">Messages & Settings > Account & System Information > System Information > DVR name</span>
+                                </label>
+                            </div>
+
+                            <input type="submit" class="config_submitter" value="Save Changes" />
+                        </div><!-- /enabler_pytivo //-->
+
+                    </fieldset>
+                </div><!-- /component-group //-->
+
+
+
+                <br />
+                <h1>Online</h1>
+                <br />
+
+                <div class="component-group clearfix">
+
+                    <div class="component-group-desc">
+                        <h3><a href="http://www.twitter.com/" onclick="window.open(this.href, '_blank'); return false;"><img src="$sbRoot/images/notifiers/twitter.gif" alt="Twitter" title="Twitter" width="16" height="16" /> Twitter</a></h3>
+                        <p>A social networking and microblogging service, enabling its users to send and read other users' messages called tweets.</p>
+                    </div>
+
+                    <fieldset class="component-group-list">
+                        <div class="field-pair">
+                            <input type="checkbox" class="enabler" name="use_twitter" id="use_twitter" #if $sickbeard.USE_TWITTER then "checked=\"checked\"" else ""# />
+                            <label class="clearfix" for="use_twitter">
+                                <span class="component-title">Enable</span>
+                                <span class="component-desc">Should Sick Beard post tweets on Twitter?</span>
+                            </label>
+                            <label class="nocheck clearfix" for="use_twitter">
+                                <span class="component-title">&nbsp;</span>
+                                <span class="component-desc">You may want to use a second account.</span>
+                            </label>
+                        </div>
+
+                        <div id="content_use_twitter">
+                        <div class="field-pair">
+                            <input type="checkbox" name="twitter_notify_onsnatch" id="twitter_notify_onsnatch" #if $sickbeard.TWITTER_NOTIFY_ONSNATCH then "checked=\"checked\"" else ""# /> 
+                            <label class="clearfix" for="twitter_notify_onsnatch">
+                                <span class="component-title">Notify on Snatch</span>
+                                <span class="component-desc">Send notification when we start a download?</span>
+                            </label>
+                        </div>
+
+                        <div class="field-pair">
+                            <input type="checkbox" name="twitter_notify_ondownload" id="twitter_notify_ondownload" #if $sickbeard.TWITTER_NOTIFY_ONDOWNLOAD then "checked=\"checked\"" else ""# />
+                            <label class="clearfix" for="twitter_notify_ondownload">
+                                <span class="component-title">Notify on Download</span>
+                                <span class="component-desc">Send notification when we finish a download?</span>
+                            </label>
+                        </div>
+
+                        <div class="field-pair">
+                            <label class="clearfix">
+                                <span class="component-title">Step One</span>
+                            </label>
+                            <label class="nocheck clearfix">
+                                <span class="component-desc">Click the "Request Authorization" button.<br/> This will open a new page containing an auth key.<br/> Note: if nothing happens check your popup blocker.<br/></span>
+                                <input type="button" value="Request Authorization" id="twitterStep1" />
+                            </label>
+                        </div>
+
+                        <div class="field-pair">
+                            <label class="clearfix">
+                                <span class="component-title">Step Two</span>
+                            </label>
+                            <label class="nocheck clearfix">
+                                <span class="component-desc">Enter the key Twitter gave you below, and click "Verify Key".<br/></span>
+                                <input type="text" id="twitter_key" value="" size="35" /><br />
+                            </label>
+                            <label class="nocheck clearfix">
+                                <input type="button" value="Verify Key" id="twitterStep2" />
+                            </label>
+                        </div>
+
+                        <div class="field-pair">
+                            <label class="clearfix">
+                                <span class="component-title">Step Three</span>
+                            </label>
+                        </div>
+
+                        <div class="testNotification" id="testTwitter-result">Click below to test.</div>
+                        <input type="button" value="Test Twitter" id="testTwitter" />
+                        <input type="submit" class="config_submitter" value="Save Changes" />
+
+                        </div><!-- /content_use_twitter //-->
+
+                    </fieldset>
+                </div><!-- /component-group //-->
+
+
+                <div class="component-group clearfix">
 
                     <div class="component-group-desc">
                         <h3><a href="http://trakt.tv/" onclick="window.open(this.href, '_blank'); return false;"><img src="$sbRoot/images/notifiers/trakt.gif" alt="Trakt" title="Trakt" width="16" height="16" /> Trakt</a></h3>
@@ -796,78 +864,9 @@
 
                     </fieldset>
                 </div><!-- /component-group //-->
-
-
-                <div id="core-component-group10" class="component-group clearfix">
-                
-                    <div class="component-group-desc">
-                        <h3><a href="http://pytivo.sourceforge.net/wiki/index.php/PyTivo" onclick="window.open(this.href, '_blank'); return false;"><img src="$sbRoot/images/notifiers/pytivo.gif" alt="pyTivo" title="pyTivo" width="16" height="16" />pyTivo</a></h3>
-                        <p>pyTivo is both an HMO and GoBack server.  This notifier will load the completed downloads to your Tivo.</p>
-                    </div>
-
-                    <fieldset class="component-group-list">
-                        <div class="field-pair">
-                            <input type="checkbox" class="enabler" name="use_pytivo" id="use_pytivo" #if $sickbeard.USE_PYTIVO then "checked=\"checked\"" else ""# /> 
-                            <label class="clearfix" for="use_pytivo">
-                                <span class="component-title">Enable</span>
-                                <span class="component-desc">Should Sick Beard send notifications to pyTivo?</span>
-                            </label>
-                            <label class="nocheck clearfix" for="use_pytivo">
-                                <span class="component-title">&nbsp;</span>
-                                <span class="component-desc">Note: Requires the downloaded files to be accessible to pyTivo, eg on same server.</span>
-                            </label>
-                        </div>
-						
-                        <div id="content_use_pytivo">
-                        
-							<div class="field-pair">
-								<label class="nocheck clearfix">
-									<span class="component-title">pyTivo IP:Port</span>
-									<input type="text" name="pytivo_host" id="pytivo_host" value="$sickbeard.PYTIVO_HOST" size="35" />
-								</label>
-								<label class="nocheck clearfix">
-									<span class="component-title">&nbsp;</span>
-									<span class="component-desc">Host running pyTivo (eg. 192.168.1.1:9032)</span>
-								</label>
-							</div>
-
-							<div class="field-pair">
-								<label class="nocheck clearfix">
-									<span class="component-title">pyTivo Share name</span>
-									<input type="text" name="pytivo_share_name" id="pytivo_share_name" value="$sickbeard.PYTIVO_SHARE_NAME" size="35" />
-								</label>
-								<label class="nocheck clearfix">
-									<span class="component-title">&nbsp;</span>
-									<span class="component-desc">Value used in pyTivo Web Configuration to name the share.</span>
-								</label>
-							</div>
-
-
-							<div class="field-pair">
-								<label class="nocheck clearfix">
-									<span class="component-title">Tivo Name</span>
-									<input type="text" name="pytivo_tivo_name" id="pytivo_tivo_name" value="$sickbeard.PYTIVO_TIVO_NAME" size="35" />
-								</label>
-								<label class="nocheck clearfix">
-									<span class="component-title">&nbsp;</span>
-									<span class="component-desc">Messages & Settings > Account & System Information > System Information > DVR name</span>
-								</label>
-							</div>
-							
-							<input type="submit" class="config_submitter" value="Save Changes" />
-                        </div><!-- /enabler_pytivo //-->
-                        
-                    </fieldset>
-                </div><!-- /component-group //-->
-
-
-
             <br/><input type="submit" class="config_submitter" value="Save Changes" /><br/>
 
             </div><!-- /config-components //-->
-
-
-
 
 </form>
 
